@@ -1,0 +1,108 @@
+:root{
+  --color: #17a2ffb7;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  body{
+    /*CAMBIAR DESPUES*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: -webkit-linear-gradient(to right, #dd181800, #dd181800), url(../img/fondo2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #dd181800, #dd181800), url(../img/fondo2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -2;
+}
+
+.bienvenida{
+  background-color: #262626b4;
+  width: 100%;
+  height: 70px;
+}
+
+.bienvenida h2{
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.table-container{
+  padding: 0 10%;
+  margin: 40px auto 0;
+}
+
+.titulo{
+  font-size: 40px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead{
+  background-color: var(--color);
+}
+
+.table thead tr th{
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: #fff;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 1px solid #000;
+}
+
+.table tbody tr td{
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: #000;
+  background-color: #2626269d;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #0000008a;
+}
+
+@media (max-width: 768px){
+  .table thead{
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+  }
+  .table tr{
+    margin-bottom: 15px;
+
+  }
+  .table tbody tr td{
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    
+  }
+}
